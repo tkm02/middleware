@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home';
+import Form from './components/Form';
+import Scan from './components/Scan';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li><Link to="/">Accueil</Link></li>
+            <li><Link to="/generate">Générer QR Code</Link></li>
+            <li><Link to="/scan">Scanner QR Code</Link></li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/generate" element={<Form />} />
+          <Route path="/scan" element={<Scan />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

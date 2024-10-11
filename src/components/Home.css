@@ -1,0 +1,81 @@
+/* Styles pour le composant Home */
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 2rem;
+    background-color: #f0f2f5;
+    text-align: center;
+  }
+  
+  .home h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .home p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .home-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .button.primary {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .button.primary:hover {
+    background-color: #45a049;
+  }
+  
+  .button.secondary {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .button.secondary:hover {
+    background-color: #1e87db;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .home h1 {
+      font-size: 2rem;
+    }
+  
+    .home p {
+      font-size: 1rem;
+    }
+  
+    .button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
